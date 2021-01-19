@@ -189,18 +189,18 @@ y     4
 </table>
 
 
-10% or more emails from POI:  UMANOFF ADAM S 0.108108108108
-10% or more emails from POI:  COLWELL WESLEY 0.136518771331
-10% or more emails from POI:  DEFFNER JOSEPH M 0.16106442577
-10% or more emails from POI:  KISHKILL JOSEPH G 0.16106442577
-10% or more emails from POI:  REDMOND BRIAN L 0.122082585278
-10% or more emails from POI:  BAZELIDES PHILIP J 0.122082585278
-10% or more emails from POI:  DURAN WILLIAM D 0.117256637168
-10% or more emails from POI:  THORN TERENCE H 0.117256637168
-10% or more emails from POI:  FASTOW ANDREW S 0.117256637168
-10% or more emails from POI:  FOY JOE 0.117256637168
-10% or more emails from POI:  DIETRICH JANET R 0.118584758942
-10% or more emails from POI:  DONAHUE JR JEFFREY M 0.217341040462
+<p>10% or more emails from POI:  UMANOFF ADAM S     0.108108108108</p>
+<p>10% or more emails from POI:  COLWELL WESLEY     0.136518771331</p>
+<p>10% or more emails from POI:  DEFFNER JOSEPH M   0.16106442577</p>
+<p>10% or more emails from POI:  KISHKILL JOSEPH G  0.16106442577</p>
+<p>10% or more emails from POI:  REDMOND BRIAN L    0.122082585278</p>
+<p>10% or more emails from POI:  BAZELIDES PHILIP J 0.122082585278</p>
+<p>10% or more emails from POI:  DURAN WILLIAM D    0.117256637168</p>
+<p>10% or more emails from POI:  THORN TERENCE H    0.117256637168</p>
+<p>10% or more emails from POI:  FASTOW ANDREW S    0.117256637168</p>
+<p>10% or more emails from POI:  FOY JOE            0.117256637168</p>
+<p>10% or more emails from POI:  DIETRICH JANET R   0.118584758942</p>
+<p>10% or more emails from POI:  DONAHUE JR JEFFREY 0.217341040462</p>
 
 
 What is the accuracy score?  0.8409090909090909
