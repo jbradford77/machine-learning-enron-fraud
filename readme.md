@@ -41,42 +41,152 @@ y     4
 
  - Total number of POIs where we have their emails:  4
 
-   POI                  Name
-0    y          Lay, Kenneth
-24   y       Delainey, David
-19   y          Forney, John
-1    y     Skilling, Jeffrey
-31   n        Bowen, Raymond
-30   n         Duncan, David
-29   n       Kopper, Michael
-28   n       Belden, Timothy
-27   n         Lawyer, Larry
-18   n          Koenig, Mark
-25   n           Glisan, Ben
-32   n       Colwell, Wesley
-23   n        Fastow, Andrew
-22   n           Fastow, Lea
-21   n         Rieker, Paula
-20   n         Rice, Kenneth
-33   n            Boyle, Dan
-26   n      Richter, Jeffrey
-17   n         Hannon, Kevin
-16   n      DeSpain, Timothy
-15   n   Calger, Christopher
-14   n       Causey, Richard
-13   n         Fuhs, William
-12   n         Furst, Robert
-11   n          Brown, James
-10   n        Bayley, Daniel
-9    n         Mulgrew, Gary
-8    n          Darby, Giles
-7    n     Bermingham, David
-6    n           Shelby, Rex
-5    n         Hirko, Joseph
-4    n         Yeager, Scott
-3    n       Krautz, Michael
-2    n         Howard, Kevin
-34   n    Loehr, Christopher
+<table>
+ <thead>
+  <tr>
+   <th>POI</th>
+   <th>Name</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>y</td>
+   <td>Lay, Kenneth</td>
+  </tr>
+  <tr>
+   <td>y</td>
+   <td> Delainey, David</td>
+  </tr>
+  <tr>
+   <td>y</td>
+   <td>Forney, John</td>
+  </tr>
+  <tr>
+   <td>y</td>
+   <td>Skilling, Jeffrey</td>
+  </tr>
+  <tr>
+   <td>n</td>
+   <td>Bowen, Raymond</td>
+  </tr>
+    <tr>
+    <td>n</td>
+    <td>Duncan, David</td>
+   </tr>
+    <tr>
+   <td>n</td>
+   <td>Kopper, Michael</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Belden, Timothy</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Lawyer, Larry</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Koenig, Mark</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Glisan, Ben</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Colwell, Wesley</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Fastow, Andrew</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Fastow, Lea</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Rieker, Paula</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Rice, Kenneth</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Boyle, Dan</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Richter, Jeffrey</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Hannon, Kevin</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>DeSpain, Timothy</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Calger, Christopher</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Causey, Richard</td>
+  </tr>
+    <tr>
+   <td>n</td>
+   <td>Fuhs, William</td>
+  </tr>
+    <tr>
+     <td>n</td>
+     <td>Brown, James</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Bayley, Daniel</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Mulgrew, Gary</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Darby, Giles</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Bermingham, David</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Shelby, Rex</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Hirko, Joseph</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Yeager, Scott</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Krautz, Michael</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Howard, Kevin</td>
+    </tr>
+   <tr>
+     <td>n</td>
+     <td>Loehr, Christopher</td>
+    </tr>
+ </tbody>
+</table>
 
 
 10% or more emails from POI:  UMANOFF ADAM S 0.108108108108
