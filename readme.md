@@ -4,24 +4,53 @@
 
 ___
 
- - total number of data points:  146
+<p>The goal for this project is to try to predict who are persons of interest from how frequently someone corresponded via email with a known person of interest and by comparing various financial data points like the amound of the employee's salary, bonus, total stock value, and stock options exercised. The machine learning library sklearn is used for predictions and to process the data and present visualizations using matplotlib. One major outlier in the data is that the total for all financial data points is included as a line in the data. This abviously makes it look like there was possibly one person who made enough money it couldn't possibly be legal. Once that record is removed a clearer picture starts to emerge. </p>
 
- - allocation across classes (POI/non-POI):  18 / 128
 
- - number of features used:  21
 
- are there features with many missing values? etc. Yes, and here
-they are
+<p>Total number of data points:  146</li>
+<p>Allocation across classes (POI/non-POI):  18 / 128</li>
+<p>Number of features used:  21</li>
+<p>Are there features with many missing values? etc. Yes, and here they are:</li>
+<ul>
+ <li>Number people with no salary data:  51</li>
+ <li>Number NaN payments:  21</li>   
+ <li>percent NaN payments:  0.143835616438</li>
+ <li>Number of POIs no payments:  0</li>
+ <li>percent poi NaN payments:  0.0</li>
+</ul>
 
- - Number people no salary:  51
+<p>The features I found that best aligned with more accurately predicting persons of interest were the financial points bonus and stock options exercised. I did explore whether or not an employee having a high percentage of email correspondence with a known person of interest correlated with them being a known person of interest, higher bonus or salary, or higher stock values. My hypothesis was that there would be a increased amount of cummunications among those who committed insider trading that correlated to them having a higher bonus or stock option value. There was a lot of noise on the scatter plot for this though and no clear regression pattern to follow, although most persons of interest did seem to fall around the 25% mark for communication with a POI. </p>
 
- - Number NaN payments:  21
+<p>I used MinMaxScaler to adjust the scale for the financial features to be comparable to email frequency then plotted the data against bonus amounts and used kmeans clustering to show in different shades of blue the groups of possible POIs and non-POIs. This may have failed because we only have email data on four known persons of interest. Or I was just wrong. At any rate, my dreams of Robert Mueller and James Comey coming to me for advice on solving crimes is not a likely scenario. </p>
 
- - percent NaN payments:  0.143835616438
+<p>I tried out the naive bayes that was already in there but that lowered the accuracy score, precision, and recall so I commented it out and went with decision tree and svc. I adjusted the C and gamma on the SVC multiple times but only got the recall up to 2.5 so I'm likely coming back here for another pass once this thing is reviewed.</p> 
 
- - Number of POIs no payments:  0
+<ul>
+ <li>What is the accuracy score?  0.8409090909090909</li>
+ <li>How many POIs are predicted for the test set?  5.0</li>
+ <li>How many people total are in your test set? 44</li>
+ <li>If your identifier predicted 0. (not POI), what would its accuracy be? 0.8863636363636364</li>
+ <li>Do you get any true positives?  ['yes']</li>
+ <li>poi precision:  0.2</li>
+ <li>poi recall:  0.25</li>
+</ul>
 
- - percent poi NaN payments:  0.0
+<p>I manually tried adjusting the C and gamma values for the SVC. This was tedious and adjusting too far one way or another would make the recall and precision go to 0. </p>
+
+<p>For validation, I printed the accuracy score, the number of POIs predicted, total number of people in the set, hypothetical accuracy if the prediction had been zero, count of the number of true positives, the precision score, and the recall score. The clustered scatter plot shows which people are predicted and which are true positives(marked with a red X)</p>
+
+<ul>
+ <li>What is the accuracy score?  0.8409090909090909</li>
+ <li>How many POIs are predicted for the test set?  5.0</li>
+ <li>How many people total are in your test set? 44</li>
+ <li>If your identifier predicted 0. (not POI), what would its accuracy be? 0.8863636363636364</li>
+ <li>Do you get any true positives?  ['yes']</li>
+ <li>poi precision:  0.2</li>
+ <li>poi recall:  0.25</li>
+</ul>
+
+___
 
  - Sample person from dataset:  METTS MARK
 
@@ -188,6 +217,7 @@ y     4
  </tbody>
 </table>
 
+<p>I wanted to find if there was a connection to the amount of correspondence between POIs and possible POIs</p>
 
 <p>10% or more emails from POI:  UMANOFF ADAM S     0.108108108108</p>
 <p>10% or more emails from POI:  COLWELL WESLEY     0.136518771331</p>
@@ -203,39 +233,25 @@ y     4
 <p>10% or more emails from POI:  DONAHUE JR JEFFREY 0.217341040462</p>
 
 
-What is the accuracy score?  0.8409090909090909
+ - minimum stock options exercised:  -44093
 
-How many POIs are predicted for the test set?  5.0
+ - maximum stock options exercised:  49110078
 
-How many people total are in your test set? 44
+ - minimum bonus:  70000
 
-If your identifier predicted 0. (not POI), what would its accurac
-y be? 0.8863636363636364
+ - max bonus:  8000000
 
-Do you get any true positives?  ['yes']
+ - minimum email to poi:  0.0093023255814
 
-poi precision:  0.2
+-  max email to poi:  1.0
 
-poi recall:  0.25
+- Rescaled $8,000,000 bonus and $1,000,000 exercised stock options:
+    [[0.00875    0.16365026]]
 
+- SVC accuracy:  0.8863636363636364
+ 
+- Do you get any true positives? ['yes']
 
- minimum stock options exercised:  -44093
+- poi precision for SVC:  0.2
 
- maximum stock options exercised:  49110078
-
- minimum bonus:  70000
-
- max bonus:  8000000
-
- minimum email to poi:  0.0093023255814
-
- max email to poi:  1.0
-Rescaled $8,000,000 bonus and $1,000,000 exercised stock options:
-  [[0.00875    0.16365026]]
-
- accuracy:  0.8863636363636364
-Do you get any true positives? (new)  ['yes']
-
-poi precision: (new) 0.2
-
-poi recall: (last print) 0.25
+- poi recall for SVC: 0.25
