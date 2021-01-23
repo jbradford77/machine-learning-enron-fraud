@@ -6,7 +6,7 @@ ___
 
 <p>The goal for this project is to try to predict who are persons of interest from how frequently someone corresponded via email with a known person of interest and by comparing various financial data points like the amound of the employee's salary, bonus, total stock value, and stock options exercised. The machine learning library sklearn is used for predictions and to process the data and present visualizations using matplotlib. One major outlier in the data is that the total for all financial data points is included as a line in the data. This abviously makes it look like there was possibly one person who made enough money it couldn't possibly be legal. Once that record is removed a clearer picture starts to emerge. </p>
 
-
+<p>Some output from the file is here on the readme, but the final version of the project is the jupyter notebook poi_id.ipynb although there's also a python 3 version .py file made from that notebook to in the py3versionFinal folder.</p>
 
 <p>Total number of data points:  146</li>
 <p>Allocation across classes (POI/non-POI):  18 / 128</li>
@@ -24,16 +24,17 @@ ___
 
 <p>I used MinMaxScaler to adjust the scale for the financial features to be comparable to email frequency then plotted the data against bonus amounts and used kmeans clustering to show in different shades of blue the groups of possible POIs and non-POIs. This may have failed because we only have email data on four known persons of interest. Or I was just wrong. At any rate, my dreams of Robert Mueller and James Comey coming to me for advice on solving crimes is not a likely scenario. </p>
 
-<p>I tried out the naive bayes that was already in there but that lowered the accuracy score, precision, and recall so I commented it out and went with decision tree and svc. I adjusted the C and gamma on the SVC multiple times but only got the recall up to 2.5 so I'm likely coming back here for another pass once this thing is reviewed.</p> 
+<p>I adjusted the parameters many times and barely got them high enough by just manually adjusting things. I added pipeline and a classifier then discovered that could've saved me a tin of time trying to find the right parameters, especially for SVC. I don't think I would've even known to check most of them.</p> 
 
+<p>Results of Decision Tree Manually Tuned</p>
 <ul>
- <li>What is the accuracy score?  0.8409090909090909</li>
- <li>How many POIs are predicted for the test set?  5.0</li>
- <li>How many people total are in your test set? 44</li>
+ <li>What is the accuracy score?  0.813953488372093</li>
+ <li>How many POIs are predicted for the test set?  8.0</li>
+ <li>How many people total are in your test set? 43</li>
  <li>If your identifier predicted 0. (not POI), what would its accuracy be? 0.8863636363636364</li>
  <li>Do you get any true positives?  ['yes']</li>
- <li>poi precision:  0.2</li>
- <li>poi recall:  0.25</li>
+ <li>poi precision:  0.5</li>
+ <li>poi recall:  0.5</li>
 </ul>
 
 <p>I manually tried adjusting the C and gamma values for the SVC. This was tedious and adjusting too far one way or another would make the recall and precision go to 0. </p>
@@ -248,10 +249,14 @@ y     4
 - Rescaled $8,000,000 bonus and $1,000,000 exercised stock options:
     [[0.00875    0.16365026]]
 
-- SVC accuracy:  0.8863636363636364
- 
-- Do you get any true positives? ['yes']
+Final answer was SVC
 
-- poi precision for SVC:  0.2
+Accuracy:  0.8372093023255814
+ 
+True positives  3 
+
+Final precision:  0.5 
+
+Final recall:  0.42857142857142855 
 
 - poi recall for SVC: 0.25
